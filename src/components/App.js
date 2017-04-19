@@ -8,10 +8,10 @@ class App extends Component {
     return (
       <Navbar brand='Agrymet' right>
         <NavItem href='/'>CADASTRE-SE</NavItem>
-        <NavItem href='/'>LOGIN</NavItem>
+        <NavItem href='/farm'>LOGIN</NavItem>
         <NavItem href='/'><Icon>more_vert</Icon></NavItem>
       </Navbar>
-    );
+    )
   }
 }
 
