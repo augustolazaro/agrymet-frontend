@@ -1,21 +1,24 @@
 import React, { Component } from 'react'
-import { Navbar, NavItem } from 'react-materialize'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Root from '../containers/Root'
 import Farm from '../containers/Farm'
+import Login from '../containers/LoginPage'
 
 class AgrymaxNavbar extends Component {
   navItems() {
     if (this.props.logged){
       return(
-        <div>
-          <NavItem href='/'>Home</NavItem>
-          <NavItem href='/farm'>Fazenda</NavItem>
-        </div>
+        <ul id='nav-mobile' className='right hide-on-med-and-down'>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/farm'>Fazenda</Link></li>
+        </ul>
       )
     } else {
       return(
-        <NavItem href='/'>CADASTRE-SE</NavItem>
+        <ul id='nav-mobile' className='right hide-on-med-and-down'>
+          <li><Link to='#'>CADASTRE-SE</Link></li>
+          <li><Link to='/login'>LOGIN</Link></li>
+        </ul>
       )
     }
   }
@@ -24,12 +27,16 @@ class AgrymaxNavbar extends Component {
     return(
       <Router>
         <div>
-          <Navbar brand='Agrymet' right>
-            <div>{ this.navItems() }</div>
-          </Navbar>
+          <nav>
+            <div className='nav-wrapper'>
+              <a href='/' className='brand-logo'>Agrymet</a>
+              { this.navItems() }
+            </div>
+          </nav>
 
           <Route exact path='/' component={Root} />
           <Route path='/farm' component={Farm} />
+          <Route path='/login' component={Login} />
         </div>
       </Router>
     )

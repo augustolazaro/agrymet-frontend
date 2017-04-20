@@ -6,7 +6,7 @@ import AgrymaxNavbar from '../components/AgrymaxNavbar'
 class App extends Component {
   render() {
     return(
-      <AgrymaxNavbar logged={true} />
+      <AgrymaxNavbar logged={false} />
     )
   }
 }
