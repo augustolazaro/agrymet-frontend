@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Map from 'google-maps-react'
+import Map from '../components/Map'
 
 class Root extends Component {
   render() {
     return(
-      <Map google={this.props.google} zoom={14} />
+      <Map />
     )
   }
 }
