@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import InputField from './common/InputField'
 import validateInput from '../shared/validators/login'
+import { connect } from 'react-redux'
+import { login } from '../actions/login'
 
 class LoginForm extends Component {
   constructor(props) {
@@ -33,7 +35,11 @@ class LoginForm extends Component {
   onSubmit(e) {
     e.preventDefault()
     if(this.isValid()) {
-      alert('Form submitted')
+      this.setState({ errors: {}, isLoading: true })
+      this.props.login(this.state).then(
+        (res) => this.context.router.push('/'),
+        (err) => this.setState({ errors: err.response.data.errors, isLoading: false })
+      )
     }
   }
 
@@ -71,4 +77,12 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm
+LoginForm.propTypes = {
+  login: PropTypes.func.isRequired
+}
+
+LoginForm.propTypes = {
+  router: PropTypes.object.isRequired
+}
+
+export default connect(null, { login })(LoginForm)
