@@ -1,0 +1,12 @@
+nav .brand-logo {
+  white-space: normal; }
+nav #application-dropdown {
+  background-color: #eee; }
+  nav #application-dropdown li:first-child {
+    pointer-events: none;
+    cursor: initial;
+    text-align: center;
+    min-height: 0;
+    padding: 10px 0; }
+
+/*# sourceMappingURL=navbar.css.map */

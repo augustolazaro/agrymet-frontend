@@ -4,6 +4,9 @@ import Root from '../containers/Root'
 import Farm from '../containers/Farm'
 import Login from '../containers/LoginPage'
 
+// Styles
+import '../stylesheets/css/navbar.css'
+
 class AgrymaxNavbar extends Component {
   navItems() {
     if (this.props.logged){
@@ -29,7 +32,25 @@ class AgrymaxNavbar extends Component {
         <div>
           <nav>
             <div className='nav-wrapper'>
-              <a href='/' className='brand-logo'>Agrymet</a>
+              <a href='#!' className='brand-logo center dropdown-button' data-activates='application-dropdown' data-beloworigin='true'>
+                AGRYMAX
+                <i className='material-icons right'>arrow_drop_down</i>
+              </a>
+              <ul id='application-dropdown' className='dropdown-content'>
+                <li className='center-align'><label>especificar cultura:</label></li>
+                <li>
+                  <Link to='#'>
+                    <i className='material-icons left'>android</i>
+                    <span>SMART CANA</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='#'>
+                    <i className='material-icons left'>android</i>
+                    <span>SMART CAFÉ</span>
+                  </Link>
+                </li>
+              </ul>
               { this.navItems() }
             </div>
           </nav>
