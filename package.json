@@ -6,6 +6,7 @@
     "classnames": "^2.2.5",
     "google-maps-react": "^1.0.19",
     "lodash": "^4.17.4",
+    "materialize-css": "^0.98.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-gmaps": "^1.5.0",
@@ -15,7 +16,8 @@
     "validator": "^7.0.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "webpack": "^1.13.2"
   },
   "scripts": {
     "start": "react-scripts start",

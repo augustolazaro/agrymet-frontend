@@ -1,0 +1,92 @@
+.sidebar
+  position: absolute
+  height: 100vh
+  width: 450px
+  top: 0
+  left: -452px
+  transition: all .2s ease-out
+  background-color: white
+  box-shadow: 2px 0 5px #333
+  &.active
+    left: 0
+    .sidebar--toggler i
+      transform: rotate(180deg)
+
+  .sidebar--toggler
+    position: absolute
+    width: 30px
+    height: 60px
+    right: -30px
+    text-align: center
+    top: 70px
+    background-color: #efefef
+    color: #666
+    box-shadow: 2px 0 5px #333
+    border-radius: 2px
+    z-index: -1
+    i
+      font-size: 20px
+      margin-left: 4px
+
+  header
+    background-color: #00695B
+    padding: 10px
+    ul
+      margin: 0
+      li
+        display: inline-block
+      li.item--active
+        border-bottom: 2px solid white
+
+  form
+    padding: 20px 10px 10px
+    overflow: hidden
+    .select-field
+      margin: 0
+
+  select
+    display: block
+
+  .form-divider
+    background-color: #00A599
+    padding: 10px
+    label
+      color: white
+
+  .reports
+    padding: 20px 10px
+    background-color: #eee
+    .option--container
+      box-shadow: 2px 2px 4px #ccc
+      background-color: transparentize(white, .2)
+      padding: 20px
+      text-align: center
+      color: #666
+      border-radius: 2px
+      margin-bottom: 15px
+      position: relative
+      cursor: pointer
+      &.disabled
+        opacity: .2
+        background-color: transparent
+        pointer-events: none
+        box-shadow: none
+        .option--info
+          color: #ccc
+      &.active
+        box-shadow: inset 0px 0px 0px 5px #00A599
+        .option--info
+          color: #00A599
+
+      .option--info
+        position: absolute
+        right: 10px
+        top: 10px
+        color: #ccc
+
+      .option--container-title
+        margin: 0
+        font-size: 12px
+
+  footer
+    padding: 0 20px

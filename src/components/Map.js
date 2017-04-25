@@ -21,7 +21,7 @@ class Map extends Component {
     return(
       <Gmaps
         width={ '100%' }
-        height={ '600px' }
+        height={ 'calc(100vh - 64px)' }
         lat={ this.state.coords.lat }
         lng={ this.state.coords.lng }
         zoom={ 10 }

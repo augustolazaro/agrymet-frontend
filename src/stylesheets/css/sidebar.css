@@ -1,0 +1,85 @@
+.sidebar {
+  position: absolute;
+  height: 100vh;
+  width: 450px;
+  top: 0;
+  left: -452px;
+  transition: all 0.2s ease-out;
+  background-color: white;
+  box-shadow: 2px 0 5px #333; }
+  .sidebar.active {
+    left: 0; }
+    .sidebar.active .sidebar--toggler i {
+      transform: rotate(180deg); }
+  .sidebar .sidebar--toggler {
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    right: -30px;
+    text-align: center;
+    top: 70px;
+    background-color: #efefef;
+    color: #666;
+    box-shadow: 2px 0 5px #333;
+    border-radius: 2px;
+    z-index: -1; }
+    .sidebar .sidebar--toggler i {
+      font-size: 20px;
+      margin-left: 4px; }
+  .sidebar header {
+    background-color: #00695B;
+    padding: 10px; }
+    .sidebar header ul {
+      margin: 0; }
+      .sidebar header ul li {
+        display: inline-block; }
+      .sidebar header ul li.item--active {
+        border-bottom: 2px solid white; }
+  .sidebar form {
+    padding: 20px 10px 10px;
+    overflow: hidden; }
+    .sidebar form .select-field {
+      margin: 0; }
+  .sidebar select {
+    display: block; }
+  .sidebar .form-divider {
+    background-color: #00A599;
+    padding: 10px; }
+    .sidebar .form-divider label {
+      color: white; }
+  .sidebar .reports {
+    padding: 20px 10px;
+    background-color: #eee; }
+    .sidebar .reports .option--container {
+      box-shadow: 2px 2px 4px #ccc;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      border-radius: 2px;
+      margin-bottom: 15px;
+      position: relative;
+      cursor: pointer; }
+      .sidebar .reports .option--container.disabled {
+        opacity: 0.2;
+        background-color: transparent;
+        pointer-events: none;
+        box-shadow: none; }
+        .sidebar .reports .option--container.disabled .option--info {
+          color: #ccc; }
+      .sidebar .reports .option--container.active {
+        box-shadow: inset 0px 0px 0px 5px #00A599; }
+        .sidebar .reports .option--container.active .option--info {
+          color: #00A599; }
+      .sidebar .reports .option--container .option--info {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #ccc; }
+      .sidebar .reports .option--container .option--container-title {
+        margin: 0;
+        font-size: 12px; }
+  .sidebar footer {
+    padding: 0 20px; }
+
+/*# sourceMappingURL=sidebar.css.map */

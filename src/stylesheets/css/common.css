@@ -1,0 +1,35 @@
+.button--square {
+  border-radius: 2px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 15px; }
+  .button--square i {
+    line-height: 40px; }
+
+.button--square-default {
+  background-color: #F7FEFD;
+  color: #333; }
+
+.button--rounded {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 35px;
+  font-size: 25px;
+  margin-right: 8px; }
+
+.button--rounded-primary {
+  background-color: #00C0A4;
+  color: #00695B;
+  border: 2px solid #00695B; }
+
+.button--rounded-active {
+  border: 2px solid white;
+  color: white; }
+
+/*# sourceMappingURL=common.css.map */
