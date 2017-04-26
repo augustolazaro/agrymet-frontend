@@ -7,9 +7,10 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 const store = createStore(
-  AppReducer,
-  window.STATE_FROM_SERVER
+  AppReducer
 )
+
+console.log(store.getState())
 
 ReactDOM.render(
   <Provider store={ store }>

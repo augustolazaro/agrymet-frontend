@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
+
+// Styles
 import '../stylesheets/css/materialize.css'
 import '../stylesheets/css/common.css'
-import 'jquery'
-import AgrymaxNavbar from '../components/AgrymaxNavbar'
+
+// Components
+import Navbar from '../components/Navbar'
 
 class App extends Component {
   render() {
     return(
-      <AgrymaxNavbar logged={false} />
+      <Navbar logged={ false } />
     )
   }
 }
