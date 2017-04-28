@@ -43,7 +43,7 @@ class ReportOption extends Component {
 ReportOption.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  disabled: PropTypes.boolean
+  disabled: PropTypes.bool
 }
 
 ReportOption.defaultProps = {

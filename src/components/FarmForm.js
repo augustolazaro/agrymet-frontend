@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import classnames from 'classnames'
 
 import InputField from './common/InputField'
 import ReportOption from './ReportOption'
@@ -29,10 +30,6 @@ class FarmForm extends Component {
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value })
-  }
-
-  componentDidMount() {
-    $('select').material_select()
   }
 
   render() {
@@ -94,7 +91,7 @@ class FarmForm extends Component {
         </div>
         <footer>
           <Link to='#' className='btn-flat'>CANCELAR</Link>
-          <Link to='#' className='btn right'>ENVIAR</Link>
+          <Link to='#' className={ classnames('btn right', { 'disabled': isLoading }) }>ENVIAR</Link>
         </footer>
       </div>
     )

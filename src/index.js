@@ -6,11 +6,7 @@ import AppReducer from './reducers/app'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-const store = createStore(
-  AppReducer
-)
-
-console.log(store.getState())
+const store = createStore(AppReducer)
 
 ReactDOM.render(
   <Provider store={ store }>
