@@ -13,6 +13,9 @@ import '../stylesheets/css/navbar.css'
 // Actions
 import { setApplication } from '../actions/application'
 
+// Libs
+import applicationConfig from '../lib/applications'
+
 class Navbar extends Component {
   navItems() {
     if (this.props.logged){
@@ -36,10 +39,10 @@ class Navbar extends Component {
     return(
       <Router>
         <div>
-          <nav>
+          <nav style={ applicationConfig.applications[this.props.application]['styles'] }>
             <div className='nav-wrapper'>
               <a href='#!' className='brand-logo center dropdown-button' data-activates='application-dropdown' data-beloworigin='true'>
-                { this.props.application }
+                { applicationConfig.applications[this.props.application]['name'] }
                 <i className='material-icons right'>arrow_drop_down</i>
               </a>
               <ul id='application-dropdown' className='dropdown-content'>
@@ -54,7 +57,10 @@ class Navbar extends Component {
                   </Link>
                 </li>
                 <li>
-                  <Link to='#'>
+                  <Link to='#' onClick={ e => {
+                    e.preventDefault()
+                    this.props.changeApplication('smart_cafe')
+                  } }>
                     <i className='material-icons left'>android</i>
                     <span>SMART CAFÉ</span>
                   </Link>
