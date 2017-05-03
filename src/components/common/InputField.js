@@ -12,7 +12,7 @@ const InputField = ({ name, value, label, error, type, onChange }) => {
         className={ classnames("validate", { 'invalid': error }) }
         id={ name }
       />
-      <label htmlFor={ name } data-error={ error } data-success="OK!">{ label }</label>
+      <label htmlFor={ name } data-error={ error } >{ label }</label>
     </div>
   )
 }

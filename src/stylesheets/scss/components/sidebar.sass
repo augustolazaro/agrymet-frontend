@@ -4,43 +4,49 @@
   width: 450px
   top: 0
   left: -452px
-  transition: all .2s ease-out
+  transition: all .3s ease-out
   background-color: white
   box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+  z-index: 9
   &.active
     left: 0
-    .sidebar--toggler i
+    .container--toggler i
       transform: rotate(180deg)
 
-  .sidebar--toggler
-    position: absolute
-    width: 30px
-    height: 60px
-    right: -30px
-    text-align: center
-    top: 70px
-    background-color: #efefef
-    color: #666
-    box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
-    border-radius: 2px
-    z-index: -1
-    i
-      font-size: 20px
-      margin-left: 4px
+  .sidebar--content
+    overflow: auto
+    height: 100%
 
   header
     background-color: #00695B
     padding: 10px
+    height: 64px
     ul
       margin: 0
       li
-        display: inline-block
-      li.item--active
-        border-bottom: 2px solid white
+        float: left
+        height: 44px
+        input, label::after, label::before
+          display: none
+        [type="radio"] + label
+          background-color: #00C0A6
+          margin-right: 10px
+          color: white
+          border-radius: 50%
+          text-align: center
+          padding-left: 0
+          height: 44px
+          width: 44px
+          font-size: 25px
+          display: flex
+          flex-direction: column
+          justify-content: center
 
-  form
+
+  .farmForm--body
     padding: 20px 10px 10px
     overflow: hidden
+    background-color: white
     .select-field
       margin: 0
 
@@ -89,4 +95,4 @@
         font-size: 12px
 
   footer
-    padding: 0 20px
+    padding: 10px 10px 0

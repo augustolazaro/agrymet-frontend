@@ -1,0 +1,17 @@
+.report--container {
+  position: fixed;
+  top: 64px;
+  width: calc(100% - 500px);
+  height: calc(100vh - 64px);
+  background-color: white;
+  right: calc(500px - 100%);
+  transition: all 0.3s ease-out;
+  background-color: white;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  z-index: 9; }
+  .report--container.active {
+    right: 0; }
+    .report--container.active .container--toggler i {
+      transform: rotate(0deg); }
+
+/*# sourceMappingURL=report_container.css.map */

@@ -7,7 +7,7 @@ class Sidebar extends Component {
     super(props)
 
     this.state = {
-      active: false
+      active: true
     }
 
     this.toggleActive = this.toggleActive.bind(this)
@@ -20,8 +20,8 @@ class Sidebar extends Component {
   render() {
     return(
       <aside className={ classnames('sidebar', { 'active': this.state.active }) }>
-        <a href='#' className='sidebar--toggler valign-wrapper' onClick={ this.toggleActive }><i className='material-icons'>play_arrow</i></a>
-        <div className='col s3'>
+        <a href='#' className='container--toggler container--toggler-right valign-wrapper' onClick={ this.toggleActive }><i className='material-icons'>play_arrow</i></a>
+        <div className='sidebar--content'>
           <FarmForm />
         </div>
       </aside>

@@ -4,52 +4,46 @@
   width: 450px;
   top: 0;
   left: -452px;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
   background-color: white;
   box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   z-index: 9; }
   .sidebar.active {
     left: 0; }
-    .sidebar.active .sidebar--toggler i {
+    .sidebar.active .container--toggler i {
       transform: rotate(180deg); }
-  .sidebar .sidebar--toggler {
-    position: absolute;
-    width: 30px;
-    height: 60px;
-    right: -30px;
-    text-align: center;
-    top: 70px;
-    background-color: #efefef;
-    color: #666;
-    box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-    z-index: -1; }
-    .sidebar .sidebar--toggler i {
-      font-size: 20px;
-      margin-left: 4px; }
   .sidebar .sidebar--content {
     overflow: auto;
     height: 100%; }
   .sidebar header {
     background-color: #00695B;
-    padding: 10px; }
+    padding: 10px;
+    height: 64px; }
     .sidebar header ul {
       margin: 0; }
       .sidebar header ul li {
-        display: inline-block; }
+        float: left;
+        height: 44px; }
         .sidebar header ul li input, .sidebar header ul li label::after, .sidebar header ul li label::before {
           display: none; }
-        .sidebar header ul li label {
+        .sidebar header ul li [type="radio"] + label {
+          background-color: #00C0A6;
+          margin-right: 10px;
+          color: white;
+          border-radius: 50%;
+          text-align: center;
           padding-left: 0;
-          height: 45px;
-          line-height: normal;
-          font-size: 25px; }
-      .sidebar header ul li.item--active {
-        border-bottom: 2px solid white; }
-  .sidebar form {
+          height: 44px;
+          width: 44px;
+          font-size: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+  .sidebar .farmForm--body {
     padding: 20px 10px 10px;
-    overflow: hidden; }
-    .sidebar form .select-field {
+    overflow: hidden;
+    background-color: white; }
+    .sidebar .farmForm--body .select-field {
       margin: 0; }
   .sidebar select {
     display: block; }
@@ -72,7 +66,7 @@
       position: relative;
       cursor: pointer; }
       .sidebar .reports .option--container.disabled {
-        opacity: 0.2;
+        opacity: .2;
         background-color: transparent;
         pointer-events: none;
         box-shadow: none; }
@@ -91,6 +85,4 @@
         margin: 0;
         font-size: 12px; }
   .sidebar footer {
-    padding: 0 20px; }
-
-/*# sourceMappingURL=sidebar.css.map */
+    padding: 10px 10px 0; }
