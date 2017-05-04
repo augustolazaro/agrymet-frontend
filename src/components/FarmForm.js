@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import classnames from 'classnames'
 import { connect } from 'react-redux'
 
+// Components
 import InputField from './common/InputField'
 import ReportOption from './ReportOption'
+import AddFarm from './AddFarm'
 
 // Styles
 import '../stylesheets/css/components/sidebar.css'
@@ -49,7 +51,7 @@ class FarmForm extends Component {
           <header className='lighten-2'>
             <ul>
               <li>
-                <Link to='#' className='button button--square button--square-default'><i className='material-icons'>add</i></Link>
+                <AddFarm active={ false }/>
               </li>
 
               <li>

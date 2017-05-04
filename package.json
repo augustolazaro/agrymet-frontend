@@ -8,6 +8,7 @@
     "lodash": "^4.17.4",
     "materialize-css": "^0.98.2",
     "react": "^15.5.4",
+    "react-async-script-loader": "^0.2.2",
     "react-dom": "^15.5.4",
     "react-gmaps": "^1.5.0",
     "react-redux": "^5.0.4",

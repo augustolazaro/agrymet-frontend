@@ -21,8 +21,7 @@ class Navbar extends Component {
     if (this.props.logged){
       return(
         <ul id='nav-mobile' className='right hide-on-med-and-down'>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/farm'>Fazenda</Link></li>
+          <li><Link to='/'>Perfil</Link></li>
         </ul>
       )
     } else {

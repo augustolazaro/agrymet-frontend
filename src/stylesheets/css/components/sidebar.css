@@ -24,7 +24,7 @@
       .sidebar header ul li {
         float: left;
         height: 44px; }
-        .sidebar header ul li input, .sidebar header ul li label::after, .sidebar header ul li label::before {
+        .sidebar header ul li input[type="radio"], .sidebar header ul li label::after, .sidebar header ul li label::before {
           display: none; }
         .sidebar header ul li [type="radio"] + label {
           background-color: #00C0A6;
