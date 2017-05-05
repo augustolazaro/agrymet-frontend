@@ -11,8 +11,8 @@ class Map extends Component {
     super(props)
     this.state = {
       coords: {
-        lat: '-23.5475',
-        lng: '-46.63611'
+        lat: '-14.235',
+        lng: '-51.9253'
       }
     }
   }

@@ -5,7 +5,7 @@ const farm = (state = {}, action) => {
     case ADD_FARM:
       return {
         id: action.id,
-        coords: actions.coords
+        coords: action.coords
       }
     default:
       return state
@@ -17,7 +17,7 @@ const farms = (state = [], action) => {
     case ADD_FARM:
       return [
         ...state,
-        todo(undefined, action)
+        farm(undefined, action)
       ]
     default:
       return state

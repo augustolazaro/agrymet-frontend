@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import InputField from './common/InputField'
 import ReportOption from './ReportOption'
 import AddFarm from './AddFarm'
+import FarmsList from './FarmsList'
 
 // Styles
 import '../stylesheets/css/components/sidebar.css'
@@ -53,16 +54,9 @@ class FarmForm extends Component {
               <li>
                 <AddFarm active={ false }/>
               </li>
-
-              <li>
-                <input id='farm_A' name='farm' type='radio' value='A' onChange={ this.onChange } checked />
-                <label htmlFor='farm_A'>A</label>
-              </li>
-              <li>
-                <input id='farm_B' name='farm' type='radio' value='B' onChange={ this.onChange }/>
-                <label htmlFor='farm_B'>B</label>
-              </li>
             </ul>
+
+            <FarmsList />
           </header>
 
           <div className='farmForm--body col s12'>

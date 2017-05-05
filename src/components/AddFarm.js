@@ -37,9 +37,7 @@ class AddFarm extends Component {
   componentShape() {
     if(this.state.active || this.props.active) {
       return(
-        <div>
-          <input ref={ (input) => { this.geoInput = input } } type='text' placeholder='Localize no mapa' name='location' />
-        </div>
+        <input ref={ (input) => { this.geoInput = input } } type='text' placeholder='Localize no mapa' name='location' />
       )
     } else {
       return(
