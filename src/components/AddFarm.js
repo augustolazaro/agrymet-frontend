@@ -26,6 +26,13 @@ class AddFarm extends Component {
     this.setState({ active: !this.state.active })
   }
 
+  componentDidMount() {
+    let input = this.geoInput
+    let options = {}
+    this.autocomplete = new window.google.maps.places.Autocomplete(input, options)
+    this.autocomplete.addListener('place_changed', this.findGeocode)
+  }
+
   componentDidUpdate() {
     let input = this.geoInput
     let options = {}

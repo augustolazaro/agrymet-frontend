@@ -6,9 +6,10 @@ import { connect } from 'react-redux'
 import Root from '../containers/Root'
 import Farm from '../containers/Farm'
 import Login from '../containers/LoginPage'
+import AddFarm from './AddFarm'
 
 // Styles
-import '../stylesheets/css/navbar.css'
+import '../stylesheets/css/components/navbar.css'
 
 // Actions
 import { setApplication } from '../actions/application'
@@ -40,6 +41,12 @@ class Navbar extends Component {
         <div>
           <nav style={ applicationConfig.applications[this.props.application]['styles'] }>
             <div className='nav-wrapper'>
+              <ul>
+                <li>
+                  <AddFarm active={ true }/>
+                </li>
+              </ul>
+
               <a href='#!' className='brand-logo center dropdown-button' data-activates='application-dropdown' data-beloworigin='true'>
                 { applicationConfig.applications[this.props.application]['name'] }
                 <i className='material-icons right'>arrow_drop_down</i>
