@@ -1,8 +1,13 @@
-import { ADD_FARM } from '../actions/farms'
+import { ADD_FARM, NEW_FARM } from '../actions/farms'
 
 const farm = (state = {}, action) => {
   switch (action.type) {
     case ADD_FARM:
+      return {
+        id: action.id,
+        coords: action.coords
+      }
+    case NEW_FARM:
       return {
         id: action.id,
         coords: action.coords
@@ -15,6 +20,11 @@ const farm = (state = {}, action) => {
 const farms = (state = [], action) => {
   switch (action.type) {
     case ADD_FARM:
+      return [
+        ...state,
+        farm(undefined, action)
+      ]
+    case NEW_FARM:
       return [
         ...state,
         farm(undefined, action)

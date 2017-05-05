@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Gmaps, Marker } from 'react-gmaps'
+import { connect } from 'react-redux'
 
 const apiKey = "AIzaSyDaBb44itnGQVy2NUY23ucm382tGmmmxTQ"
 const gmParams = { v: '3.exp', key: apiKey }
@@ -24,20 +25,28 @@ class Map extends Component {
         height={ 'calc(100vh - 64px)' }
         lat={ this.state.coords.lat }
         lng={ this.state.coords.lng }
-        zoom={ 10 }
+        zoom={ 5 }
         mapTypeId={ 'satellite' }
         loadingMessage={ 'Carregando mapa da fazenda' }
         params={ gmParams }>
-        <Marker
-          lat={ this.state.coords.lat }
-          lng={ this.state.coords.lng }
-          draggable={ false }
-          title={ 'Fazenda Santa Maria' }
-          icon={ pinIcon }
-        />
+        { this.props.farms.map(farm =>
+          <Marker
+            lat={ farm.coords.split(",")[0] }
+            lng={ farm.coords.split(",")[1] }
+            draggable={ false }
+            title={ 'Fazenda' }
+            icon={ pinIcon }
+          />
+        ) }
       </Gmaps>
     )
   }
 }
 
-export default Map
+function mapStateToProps(state) {
+  return {
+    farms: state.farms
+  }
+}
+
+export default connect(mapStateToProps)(Map)

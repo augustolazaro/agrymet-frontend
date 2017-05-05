@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import scriptLoader from 'react-async-script-loader'
+import { connect } from 'react-redux'
+
+// Actions
+import { newFarm } from '../actions/farms'
 
 scriptLoader(['https://maps.googleapis.com/maps/api/js?key=AIzaSyDaBb44itnGQVy2NUY23ucm382tGmmmxTQ'])
 class AddFarm extends Component {
@@ -31,7 +35,9 @@ class AddFarm extends Component {
 
   findGeocode() {
     let place = this.autocomplete.getPlace()
-    console.log(place.geometry.location.lat(), place.geometry.location.lng())
+    let coords = place.geometry.location.lat().toString() + "," + place.geometry.location.lng().toString()
+    this.props.addNewFarm(coords)
+    console.log(coords)
   }
 
   componentShape() {
@@ -55,4 +61,18 @@ class AddFarm extends Component {
   }
 }
 
-export default AddFarm
+function mapStateToProps(state) {
+  return {
+    state
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addNewFarm: (coords) => {
+      dispatch(newFarm(coords))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddFarm)
